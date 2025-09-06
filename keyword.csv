@@ -1,0 +1,15 @@
+steps,Keywords,Locatortype,locatorpath,Value
+1,Open_browser,,,https://parabank.parasoft.com/parabank/register.htm
+2,enter_firstname,"By.NAME,",customer.firstName,{firstname}
+3,enter_lastname,"By.NAME,",customer.lastName,{lastname}
+4,enter_address_street,"By.NAME,",customer.address.street,430 street
+5,enter_address_city,"By.NAME,",customer.address.city,Chennai
+6,enter_address_state,"By.NAME,",customer.address.state,Tamilnadu
+7,enter_address_zipcode,"By.NAME,",customer.address.zipCode,12345689
+8,enter_customer_ssn,"By.NAME,",customer.ssn,1234238
+9,enter_username,"By.NAME,",customer.username,{username}
+10,enter_password,"By.NAME,",customer.password,{password}
+11,enter_password_repeat,"By.NAME,",repeatedPassword,{password}
+12,Click_register1,"By.XPATH,","//input[@value=""Register""]",
+13,Success_message,"By.XPATH,",//*[@id='rightPanel']//child::p,
+14,close_browser,,,
