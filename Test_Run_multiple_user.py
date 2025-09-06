@@ -8,12 +8,7 @@ import pytest
 
 def test_execute(firstname,lastname,username,password):
 
-    # user_data = {
-    #     "firstname": firstname,
-    #     "lastname": lastname,
-    #     "username": username,
-    #     "password": password
-    # }
+ 
 
     with open("keyword.csv", "r") as f:
         reader = DictReader(f)
@@ -25,13 +20,7 @@ def test_execute(firstname,lastname,username,password):
             # locator=row["Locatortype"],row["Locatorpath"]
             value = row["Value"]
 
-            # # excel=load_data()
-            # # Replace data_value with user data
-            # if value and "{" in value and "}" in value:
-            #     data_value = value.strip("{}")  #  {firstname} → firstname
-            #     value = user_data.get(data_value, value)
-            #     # print(f"Replacing placeholder {value} → {replaced}")
-            #     # value=replaced
+          
             func = getattr(Register_user,keyword)
 
             # Call the function with correct params
@@ -60,6 +49,7 @@ def test_execute(firstname,lastname,username,password):
         #         func(value)
         #     else:
         #         func()
+
 
 
 
